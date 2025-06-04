@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+{% block title %}{% endblock %}
+{% block stylesheet %}
+    <link rel="stylesheet" href="/static/styles/layout.css">{% endblock %}
+{% block body %}
+    <div class="main-content">
+        <div class="book-container">
+            <div class="book" id="book">
+                <div class="book-page left-page">
+                    <div class="page-content">
+                        <div class="left-content">
+                            <div class="icon-circle">
+                                <svg fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <h3 class="left-title">History</h3>
+                            <p class="left-subtitle">Reflect on your past</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="book-page right-page">
+                    <div class="page-content">
+                        <div class="right-content">
+                            <div class="welcome-text">
+                                <h1 class="main-title" id="mainTitle">Welcome to</h1>
+                                <h2 class="subtitle" id="subtitle">History, Now, Hereafter</h2>
+                                <h3 class="journal-title" id="journalTitle">Journal</h3>
+                            </div>
+
+                            <div class="action-buttons" id="actionButtons">
+                                <a href="/signup" class="btn btn-primary">Start Your Journey</a>
+                                <a href="/login" class="btn btn-secondary">Continue Writing</a>
+                                <div class="login-link">
+                                    Already have an account? <a href="/login">Sign in here</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book-spine">
+                    <span class="spine-text">Journal</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 joyinalgorithm. All rights reserved.</p>
+            <nav class="footer-links">
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms & Conditions</a>
+            </nav>
+        </div>
+    </footer>
+
+    {% block scripts %}<script src="/static/scripts/layout.js"></script>{% endblock %}
+{% endblock %}
